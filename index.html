@@ -56,7 +56,7 @@
         </a>
       </div>
       <div class="middle-nav NavbarContainer-center">
-        <input placeholder="Images, #tags, @users oh my!" type="text" class="Searchbar-textInput" name="q" value
+        <input oninput = debounce(displayData,1200) placeholder="Images, #tags, @users oh my!" type="text" class="Searchbar-textInput" name="q" value
           style="height: 36px" />
         <button type="submit" class="Searchbar-submitInput">
           <img class="search"
@@ -242,3 +242,52 @@
 </body>
 
 </html>
+
+<script>
+
+let timer;
+
+async function getData() {
+
+    try {
+        let foodName = document.querySelector(".Searchbar-textInput").value;
+            
+        var response = await fetch(
+            //  `https://www.omdbapi.com/?s=${name}&apikey=${apiKey}`
+            `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`
+        );
+
+        var data = await response.json();
+        // console.log(data)
+        return data.meals;
+
+        } catch (error) {
+        console.log(error);
+        }
+    }
+
+
+async function displayData(){
+      console.log("1sec")
+    //   moviesDiv.innerHTML = "";
+
+      let food_data = await getData();
+      //console.log(food_data);
+
+
+      if(food_data === undefined){
+          return false;
+      }
+      console.log(food_data)
+    //   write here code for displaying data
+ }
+
+function debounce(func,delay){
+    // If user presses any key before timeout clear prev timeout
+    clearTimeout(timer)
+    // set time to call function
+    timer = setTimeout(() => {
+        func()
+    },delay)
+}
+</script>
