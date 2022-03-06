@@ -1,0 +1,147 @@
+body {
+  margin: 0%;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.main-header-div {
+  background: url(https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png)
+    no-repeat;
+  background-size: cover;
+  height: 360px;
+  padding: 15px;
+}
+.logo {
+  margin: auto 0px;
+}
+a {
+  color: #01b96b;
+  text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+.navBar {
+  display: flex;
+  /* border: 1px solid white; */
+  justify-content: space-between;
+}
+.navBar div {
+  display: flex;
+  /* border: 1px solid yellow; */
+}
+
+.Button img {
+  padding: 0;
+  font-size: inherit;
+  position: inherit;
+  display: inline-block;
+  margin-right: 13px;
+  vertical-align: middle;
+}
+.ProfileNavbar-loggedIn .EmeraldButton {
+  margin-left: 20px;
+}
+.Button {
+  text-align: center;
+  height: 35px;
+  display: inline-block;
+  padding: 7px 14px 10px 9px;
+  text-transform: none;
+  user-select: none;
+  touch-action: manipulation;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  position: relative;
+  width: auto;
+  background-color: #1bb76e;
+  box-shadow: 0 6px 10px 0 rgb(27 28 30 / 31%);
+  color: #fff;
+  white-space: nowrap;
+}
+.upload {
+  box-shadow: 0 3px 4px rgb(0 0 0 / 12%);
+  padding: 0 10px 0 9px;
+  overflow: hidden;
+  margin: auto 20px;
+  line-height: 35px;
+}
+.EmeraldButton {
+  background: #6432f9;
+  box-shadow: 0 3px 4px rgb(0 0 0 / 12%);
+  padding: 0 10px 0 9px;
+  overflow: hidden;
+  margin: auto 0;
+  line-height: 35px;
+}
+.NavbarNotifications {
+  display: inline-flex;
+  margin: auto 10px;
+}
+.Searchbar-textInput {
+  background: hsla(0, 0%, 100%, 0.25);
+  border: 1px solid transparent;
+  padding: 8px 35px 8px 10px;
+  border-radius: 3px;
+  width: 100%;
+  outline: 0 none;
+  opacity: 0.8;
+  min-height: 34px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #fff;
+  text-shadow: inherit;
+  -webkit-text-fill-color: inherit;
+}
+.Searchbar-submitInput {
+  font-size: 20px;
+
+  margin: auto;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  outline: 0 none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.NavbarContainer-center {
+  max-width: 550px;
+  margin: auto;
+  align-items: center;
+  flex: 1;
+  justify-content: space-around;
+}
+.HomeCover .Searchbar,
+.TagsCover .Searchbar {
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.Searchbar {
+  position: relative;
+  float: right;
+  width: 100%;
+  max-width: 550px;
+}
+.Dropdown-title {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: right;
+    color: #babec4;
+    cursor: pointer;
+}
+.NavbarAvatar {
+    height: 37px;
+    width: 37px;
+    margin-right: 0;
+    vertical-align: middle;
+    margin-left: 0;
+    display: inline-block;
+    background-image: url(https://imgur.com/user/singh202/avatar);
+}
