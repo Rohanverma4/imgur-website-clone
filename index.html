@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <h1>Hello this is rohan</h1>
+    <img src = "https://i.imgur.com/5oA7UUs.jpg" />
 </body>
 </html>
+
+<script type="module">
+    // import { axios } from 'axios'
+    // var clientId = '6a6928c07dbfe75'
+    // const promise = () => {
+    //     return new Promise((resolve,reject) => {
+    //         axios.get(`https://api.imgur.com/3/gallery/hot/viral/day/1?showViral=true&mature=false&album_previews=false`, {
+    //             headers: {
+    //                 'Authorization':`Client-ID ${clientId}`
+    //              }
+    //         }).then(resolve => setTimeout(resolve, 5000)).catch((err) =>{
+    //             reject(err)
+    //         })
+    //             })
+    // }
+    // promise()
+    const key = "6657dc7f1fae43479b492649220403";
+     var clientId = '6a6928c07dbfe75'
+     var url2 = `https://api.imgur.com/3/gallery/hot/viral/day/1?showViral=true&mature=false&album_previews=false`
+     var url = 'http://api.weatherapi.com/v1/current.json?key="6657dc7f1fae43479b492649220403"&q="delhi"&aqi=no'
+     async function getData() {
+        await axios.get(`https://imgur-beckend.herokuapp.com/data`)
+        .then((res) => {
+            console.log(res.data)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+    getData()
+
+    // function filterMovie() {
+
+    //  let url = `https://api.imgur.com/3/gallery/hot/viral/day/1?showViral=true&mature=false&album_previews=false`;
+
+    //      fetch(url,{
+    //         method: "GET",
+    //         headers: {
+    //             "Content-type": "application/json;charset=UTF-8",
+    //             'Authorization':`Client-ID ${clientId}`
+    //         }
+    //      }).then(function(response){
+    //         return response.json();
+    //    })
+    //    .then(function(res){
+    //        console.log(res);           
+    //    })
+    //        .catch(function(err){
+    //           console.log('found an error in my fetch: ',err);
+    //      })
+    // }
+    // filterMovie()
+</script>
