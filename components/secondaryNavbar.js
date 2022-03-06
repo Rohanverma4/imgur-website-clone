@@ -1,0 +1,72 @@
+function secNavbar(){return (`<div class="left-sec-div">
+<div class="logo-sec-div logoss">
+  <img src="https://s.imgur.com/images/favicon-96x96.png" alt="">
+</div>
+</div>
+<div class="middle-sec-div">
+<div class="most-viral-div">
+  <span >Most Viral<div class="triangle-down"></div></span>
+</div>
+<div class="middle-nav NavbarContainer-center middle-search-div">
+  <input
+    placeholder="Images, #tags, @users oh my!"
+    type="text"
+    class="Searchbar-textInput"
+    name="q"
+    value
+    style="height: 36px"
+  />
+  <button type="submit" class="Searchbar-submitInput">
+    <img
+      class="search"
+      src="https://s.imgur.com/desktop-assets/desktop-assets/icon-search.8d0f9b564a4659d48d8eca38b968a7f2.svg"
+    />
+  </button>
+</div>
+<div>
+  <span>Newest<div class="triangle-down"></div></span>
+</div>
+
+<div class="right-sec-middle-div CoverChangedView">
+  <div class="content-control">
+    <img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-filter.551faed00bcf04e07c9e01a6874bd652.svg" alt="">
+  </div>
+  <div class="auto-play">
+    <img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-pause.68f07ce1a7e07bac06d1f2c527d7a9e5.svg" alt="">
+  </div>
+  <div class="uniform">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="17" height="17" class="menu-opt">
+      <rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"></rect>
+      <g>
+        <g>
+          <g>
+            <polygon points="6.17870715566179,0 1.1573245256338325,0 0.15306144952774048,0 0.15306144952774048,1.0042672515679527 0.15306144952774048,6.0256540079346905 0.15306144952774048,7.02991762439467 1.1573245256338325,7.02991762439467 6.17870715566179,7.02991762439467 7.18298727747689,7.02991762439467 7.18298727747689,6.0256540079346905 7.18298727747689,1.0042672515679527 7.18298727747689,0 "></polygon>
+          </g>
+        </g>
+        <g>
+          <g>
+            <polygon points="6.278707504272461,10 1.25732421875,10 0.25306129455566406,10 0.25306129455566406,11.004266738891602 0.25306129455566406,16.025653839111328 0.25306129455566406,17.029918670654297 1.25732421875,17.029918670654297 6.278707504272461,17.029918670654297 7.282987594604492,17.029918670654297 7.282987594604492,16.025653839111328 7.282987594604492,11.004266738891602 7.282987594604492,10 "></polygon>
+          </g>
+        </g>
+        <g>
+          <g>
+            <polygon points="15.978708267211914,9.900003053247929 10.957324981689453,9.900003053247929 9.953062057495117,9.900003053247929 9.953062057495117,10.90426979213953 9.953062057495117,15.925656892359257 9.953062057495117,16.929921723902225 10.957324981689453,16.929921723902225 15.978708267211914,16.929921723902225 16.982988357543945,16.929921723902225 16.982988357543945,15.925656892359257 16.982988357543945,10.90426979213953 16.982988357543945,9.900003053247929 "></polygon>
+          </g>
+        </g> 
+        <g>
+          <g>
+            <polygon points="15.878707885742188,-0.10000000149011612 10.857324600219727,-0.10000000149011612 9.85306167602539,-0.10000000149011612 9.85306167602539,0.9042667374014854 9.85306167602539,5.925653837621212 9.85306167602539,6.929918669164181 10.857324600219727,6.929918669164181 15.878707885742188,6.929918669164181 16.88298797607422,6.929918669164181 16.88298797607422,5.925653837621212 16.88298797607422,0.9042667374014854 16.88298797607422,-0.10000000149011612 "></polygon>
+          </g>
+        </g>
+      </g> 
+    </svg>
+  </div>
+</div>
+</div>
+<div class="right-sec-div">
+<div class="logo-sec-div logoss user-avtar">
+              <img src="data:image/png;base64,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" alt="">
+</div>
+</div>`)}
+
+export default secNavbar;
