@@ -1,4 +1,4 @@
-function secNavbar(){return (`<div class="left-sec-div">
+function secNavbar(){return (`<div id="nav" class="left-sec-div">
 <div class="logo-sec-div logoss">
   <img src="https://s.imgur.com/images/favicon-96x96.png" alt="">
 </div>
