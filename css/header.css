@@ -381,3 +381,38 @@ svg:not(:root) {
     
   }
 
+  .fetch-data-div{
+    border: 1px solid black;
+    width: 85%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 2%;
+    /* grid-row-gap: 0%; */
+    margin: auto;
+    height: 580rem;
+    /* background-color: #2e3035; */
+   
+ }
+
+ .fetch-data-div > div{
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+     /* margin: auto; */
+     height: fit-content;
+     color: black;
+ }
+
+ .fetch-data-div > div > img {
+    height: 20rem;
+    width: 100%;
+ }
+ .fetch-data-div > div > h4 {
+   text-align: center;
+   color: black;
+    
+ }
+ .innerdiv {
+   display: flex;
+   justify-content: space-around;
+
+ }
