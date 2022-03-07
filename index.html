@@ -322,12 +322,15 @@
         <!-- Content is seted according to the scrolling of the content div -->
       </div>
     </div>
+    <div id="withscroll" class="secondary-navBar"></div>
     <div class="content"></div>
     <div class="footer"></div>
   </body>
 
   <script type="module">
     var mainHeader = document.getElementById("nav--hidden")
+    var withscroll = document.getElementById("withscroll");
+  
     import secNavbar from "./components/secondaryNavbar.js";
 
     import secNWs from "./components/secnavWS.js";
@@ -338,13 +341,14 @@
     let lastScroll = 0;
     window.addEventListener("scroll", () => {
       if (lastScroll + 310 > window.scrollY) {
+        withscroll.innerHTML = "";
         secondaryNavbar.innerHTML = "";
         secondaryNavbar.innerHTML = secNWs();
         mainHeader.style.transform = "translateY(0)"
       } else {
         secondaryNavbar.innerHTML = "";
-        secondaryNavbar.innerHTML = secNavbar();
-        mainHeader.style.transform = "translateY(calc( 10))"
+        withscroll.innerHTML = secNavbar();
+        // mainHeader.style.transform = "translateY(calc( 10))"
       }
     });
   </script>

@@ -369,6 +369,15 @@ svg:not(:root) {
     left: 0%;
     top: 0;
   }
-  /* #nav--hidden{
-    transform: translateY(calc(-1* 300px));
-  } */
+  #withscroll{
+    background: url(https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png)
+    no-repeat;
+  position: fixed;  
+    top: 0;
+    width: 100%;
+    margin-top: 0%;
+    padding: 0 10%;
+    z-index: 1;
+    
+  }
+
