@@ -202,7 +202,7 @@ a:hover {
   margin-top: 20px;
   padding: 5px;
   font-size: 20px;
-
+  transition: transform 0.5s;
 }
 .secondary-navBar div {
   display: flex;
@@ -361,3 +361,14 @@ svg:not(:root) {
   .opt-flex div span div{
     margin: auto 5px;
   }
+  .content{
+    height: 1800px;
+  }
+  #sec-navBa{
+    position: sticky;
+    left: 0%;
+    top: 0;
+  }
+  /* #nav--hidden{
+    transform: translateY(calc(-1* 300px));
+  } */
