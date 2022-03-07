@@ -454,12 +454,12 @@ function appendData(data){
 
         let img = document.createElement('img');
         
-        // if (item.images[0].type == 'image/png' || item.images[0].type == 'image/jpeg'){
-        //   img.src = item.images[0].link
-        // } else {
-        //   img.src = 'https://i.imgur.com/OoyP9qS.jpg'
-        // }
-        img.src = 'https://i.imgur.com/Wr497np.jpg'
+        if (item.images[0].type == 'image/png' || item.images[0].type == 'image/jpeg'){
+          img.src = item.images[0].link
+        } else {
+          img.src = 'https://i.imgur.com/OoyP9qS.jpg'
+        }
+        // img.src = 'https://i.imgur.com/Wr497np.jpg'
        console.log(item.title);
           
         let h4 = document.createElement('h4');
