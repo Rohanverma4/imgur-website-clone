@@ -177,7 +177,7 @@ a:hover {
 
 .tags > div {
   width: 10%;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   height: 150px;
   overflow: hidden;
   box-sizing: border-box;
@@ -188,7 +188,7 @@ a:hover {
 }
 .tags div:nth-child(1) {
   width: 20%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 .tags div p {
   width: fit-content;
@@ -202,6 +202,7 @@ a:hover {
   margin-top: 20px;
   padding: 5px;
   font-size: 20px;
+
 }
 .secondary-navBar div {
   display: flex;
@@ -213,8 +214,8 @@ a:hover {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 10px solid white;
-  color: white;
+  border-top: 10px solid silver;
+  color: silver;
   margin-top: 5px;
 }
 .logo-sec-div {
@@ -291,12 +292,13 @@ svg:not(:root) {
 }
 .content-div p{
   color: #aed8ea;
-  font-size: 12px;
-}
-.content-div :nth-child(1){
   font-size: 14px;
-
 }
+.content-div :last-child{
+  font-size: 12px;
+  color: silver;
+}
+
 .first-div {
   background-color: #4070b5;
 }
@@ -320,7 +322,7 @@ svg:not(:root) {
 }
 .pos-rel{
   position: absolute;
-  top: 100px;
+  top: 103px;
   /* right: 15px; */
 }
 .pos-abs{
@@ -336,4 +338,26 @@ svg:not(:root) {
     background-color: #e47d57;
     top: 86px;
 
+  }
+  .without-scroll{
+    width: 80%;
+    /* border: 1px solid yellow; */
+    height: 50px;
+    margin: auto;
+  }
+  .secondary-navBar div{
+    display: flex;
+    color: silver;
+  }
+  .opt-flex{
+    justify-content: space-between;
+    /* border: 1px solid aqua; */
+    width: 80%;
+  }
+  .opt-flex div span{
+    display: flex;
+    margin: auto 0;
+  }
+  .opt-flex div span div{
+    margin: auto 5px;
   }
