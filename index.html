@@ -56,8 +56,8 @@
         </a>
       </div>
       <div class="middle-nav NavbarContainer-center">
-        <input oninput = debounce(displayData,1200) placeholder="Images, #tags, @users oh my!" type="text" class="Searchbar-textInput" name="q" value
-          style="height: 36px" />
+        <input oninput=debounce(displayData,1200) placeholder="Images, #tags, @users oh my!" type="text"
+          class="Searchbar-textInput" name="q" value style="height: 36px" />
         <button type="submit" class="Searchbar-submitInput">
           <img class="search"
             src="https://s.imgur.com/desktop-assets/desktop-assets/icon-search.8d0f9b564a4659d48d8eca38b968a7f2.svg" />
@@ -126,19 +126,17 @@
         <p>MORE TAGS +</p>
       </div>
       <div class="tags">
-        <div class="pos-abs" >
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgt6VtBecUVFV_gfEOP2iaa5kCkLNyz0NxIw&usqp=CAU"
+        <div class="pos-abs">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgt6VtBecUVFV_gfEOP2iaa5kCkLNyz0NxIw&usqp=CAU"
             style="height: 150px; width: 100%;" alt="">
-          <div class="content-div first-div pos-rel" >
+          <div class="content-div first-div pos-rel">
             <p>Space</p>
             <p>FEATURED . 28,308 POST</p>
           </div>
 
         </div>
         <div class="pos-abs">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbnhwJptTdXg7wpiBD9wgfa3cyub0ElQ2W8A&usqp=CAU"
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbnhwJptTdXg7wpiBD9wgfa3cyub0ElQ2W8A&usqp=CAU"
             style="height: 150px; width: 100%;" alt="">
           <div class="content-div sec-div pos-rel">
 
@@ -194,8 +192,7 @@
           </div>
         </div>
         <div class="pos-abs">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5EJQKTSmUSHUoJYOCQRbDCZpyceUEn_8Dtg&usqp=CAU"
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5EJQKTSmUSHUoJYOCQRbDCZpyceUEn_8Dtg&usqp=CAU"
             style="height: 150px; width: 100%;" alt="">
 
           <div class="content-div seventh-div pos-rel">
@@ -231,63 +228,74 @@
 
     </div>
     <div class="secondary-navBar" id="sec-navBar">
-
+        <!-- Content is seted according to the scrolling of the content div -->
     </div>
     <div class="content"></div>
     <div class="footer"></div>
-    <script type="module">
-      import secNavbar from "./components/secondaryNavbar.js"
-      document.getElementById("sec-navBar").innerHTML = secNavbar();
-    </script>
+
 </body>
+
+<script type="module">
+
+  document.getElementById("sec-navBar").innerHTML = "";
+  import secNavbar from "./components/secondaryNavbar.js"
+  document.getElementById("sec-navBar").innerHTML = secNavbar();
+
+  document.getElementById("sec-navBar").innerHTML = "";
+  import secNWs from "./components/secnavWS.js"
+  document.getElementById("sec-navBar").innerHTML = secNWs();
+
+
+
+</script>
 
 </html>
 
 <script>
 
-let timer;
+  let timer;
 
-async function getData() {
+  async function getData() {
 
     try {
-        let foodName = document.querySelector(".Searchbar-textInput").value;
-            
-        var response = await fetch(
-            //  `https://www.omdbapi.com/?s=${name}&apikey=${apiKey}`
-            `https://imgur-beckend.herokuapp.com/data?q=${foodName}`
-        );
+      let foodName = document.querySelector(".Searchbar-textInput").value;
 
-        var data = await response.json();
-        // console.log(data)
-        return data;
+      var response = await fetch(
+        //  `https://www.omdbapi.com/?s=${name}&apikey=${apiKey}`
+        `https://imgur-beckend.herokuapp.com/data?q=${foodName}`
+      );
 
-        } catch (error) {
-        console.log(error);
-        }
+      var data = await response.json();
+      // console.log(data)
+      return data;
+
+    } catch (error) {
+      console.log(error);
     }
+  }
 
 
-async function displayData(){
-      console.log("1sec")
+  async function displayData() {
+    console.log("1sec")
     //   moviesDiv.innerHTML = "";
 
-      let food_data = await getData();
-      //console.log(food_data);
+    let food_data = await getData();
+    //console.log(food_data);
 
 
-      if(food_data === undefined){
-          return false;
-      }
-      console.log(food_data)
+    if (food_data === undefined) {
+      return false;
+    }
+    console.log(food_data)
     //   write here code for displaying data
- }
+  }
 
-function debounce(func,delay){
+  function debounce(func, delay) {
     // If user presses any key before timeout clear prev timeout
     clearTimeout(timer)
     // set time to call function
     timer = setTimeout(() => {
-        func()
-    },delay)
-}
+      func()
+    }, delay)
+  }
 </script>
